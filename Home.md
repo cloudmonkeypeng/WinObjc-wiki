@@ -41,7 +41,7 @@ To use the tool:
 4.	A Visual Studio solution file is created in your current directory, double click this file to open your project in Visual Studio.
 5.	Press **Ctrl-F5** to build your app and run it on your PC.
 
-You can also pass the **-i** option at the command line to run the **vsimporter** tool in interactive mode. Interactive mode lets you see and select the specific configurations of the Xcode project that you wish to import. By default **vsimporter** creates a Visual Studio solution that targets Windows 10. If you'd like to target Windows 8.1 (Phone or Store), use the **-format** option.
+You can also pass the **-i** option at the command line to run the **vsimporter** tool in interactive mode. Interactive mode lets you see and select the specific configurations of the Xcode project that you wish to import. By default **vsimporter** creates a Visual Studio solution that targets Windows 10. If you'd like to target Windows 8.1 (Phone or Store), use the **-format** option and specify one of *winstore8.1*, *winphone8.1*, or *winstore10* (winstore10 is the default).
 
 For help running **vsimporter**, use the **-help** option at the command line to see the full set of supported options.
 
