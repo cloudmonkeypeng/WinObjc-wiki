@@ -14,7 +14,7 @@ If you'd like to build the SDK from source, you can use the following process:
 1. Install Visual Studio
 2. Clone the repo
 
-    `git clone --recursive https://github.com/Microsoft/WinObjC`
+    `git clone https://github.com/Microsoft/WinObjC`
 3. Navigate into the **build** directory of the repo and double-click on **build.sln** to open the project solution in Visual Studio.
 4. Set the build type to be **Release**.
 5. Right-click on the **package** project under the **Solution** folder and select build.
