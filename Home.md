@@ -4,9 +4,9 @@ To use the Windows Bridge for iOS you'll need:
 
 - Windows 10
 - Visual Studio 2015 with Windows developer tools
-- And the SDK itself: winobjc-0.1-preview.zip [LINK TBD]
+- And the SDK itself: [winobjc](https://github.com/Microsoft/WinObjC/releases/download/0.1-preview/winobjc.zip)
 
-If you don't have Visual Studio, you can download Visual Studio Community 2015 for free [here](https://go.microsoft.com/fwlink/p/?LinkId=534599).
+If you don't have Visual Studio, you can download Visual Studio Community 2015 for free [here](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx).
 
 ## Build the SDK
 If you'd like to build the SDK from source, you can use the following process:
@@ -14,7 +14,7 @@ If you'd like to build the SDK from source, you can use the following process:
 1. Install Visual Studio
 2. Clone the repo
 
-    `git clone --recursive https://github.com/microsoft/winobjc`
+    `git clone --recursive https://github.com/Microsoft/WinObjC`
 3. Navigate into the **build** directory of the repo and double-click on **build.sln** to open the project solution in Visual Studio.
 4. Set the build type to be **Release**.
 5. Right-click on the **package** project under the **Solution** folder and select build.
@@ -24,14 +24,16 @@ If you'd like to build the SDK from source, you can use the following process:
 Installing the SDK is simple, just extract the winobjc.zip file to an appropriate location on your PC. The only restriction is that this path must not contain any spaces.
 
 ## Using the SDK
-There are two ways to use the SDK. The first is to use the **vsimporter** tool to import your existing Xcode project into a Visual Studio solution and the second is to instead add Objective-C functionality to a new or existing Visual Studio project.
+The simplest way to use the SDK is to run one of the included samples. See the README on the main [page](https://github.com/Microsoft/WinObjC) to see how to do this.
+
+Looking beyond the samples, there are two ways to use the SDK. The first is to use the **vsimporter** tool to import your existing Xcode project into a Visual Studio solution and the second is to instead add Objective-C functionality to a new or existing Visual Studio project.
 
 ### Using vsimporter
 The **vsimporter** tool enables you to import your Xcode project into a new Visual Studio Universal Windows Platform (UWP) app project with Objective-C support.
 
 To use the tool:
 
-1. Download the SDK, **winobjc-0.1-preview.zip**, and extract the files to a directory (for example `c:\winobjc`)
+1. Download the prebuilt SDK from [here](https://github.com/Microsoft/WinObjC/releases/download/0.1-preview/winobjc.zip) and extract the files to a directory (for example `c:\winobjc`)
 2. From a command prompt, navigate to the directory containing your Xcode project, for example `c:\winobjc\samples\WOCCatalog`
 3. At the command prompt, run **vsimporter.exe**
 
@@ -67,7 +69,7 @@ For help running **vsimporter**, use the **-help** option at the command line to
 ### Add Objective-C support to a new (or existing) Visual Studio project
 Rather than importing an existing Xcode project, you can choose to instead add Objective-C functionality to a new or existing VS project using the following process:
 
-1. Download the SDK, **winobjc-0.1-preview.zip**, and extract the files to a directory.
+1. Download the prebuilt SDK [here](https://github.com/Microsoft/WinObjC/releases/download/0.1-preview/winobjc.zip) and extract the files to a directory.
 2. Open a new or existing UWP app project in Visual Studio.
 3. Within the Visual Studio solution, right-click on the project.
 2. Select **Build Dependencies > Build Customizations…**.
@@ -110,7 +112,7 @@ To support direct usage of Windows APIs, the `include/Platform/Windows 8.1/UWP` 
 
 The underlying implementations for these Objective-C projections use the Windows Runtime Library and are located in the libraries in `lib/Windows 8.1/x86`.
 
-To see a detailed example of directly calling Windows APIs in Objective-C, take a look at [TBD SAMPLE].
+To see a detailed example of directly calling Windows APIs in Objective-C, take a look at [WOCCatalog](https://github.com/Microsoft/WinObjC/tree/master/samples/WOCCatalog).
 
 ### Async APIs
 Asynchronous operations are supported through Objective-C via callbacks to blocks. For example, the Objective-C signature for *launchUriAsync* is:
@@ -248,13 +250,23 @@ You can reach our dev team in a variety of ways:
 
 ## What's still under development?
 As this project is still under active development, there are a few features that are not yet built out:
+
 1.	Autolayout
+
 2.	Storyboard support
+
 3.	MapKit
+
 4.	AssetsLibrary
+
 5.	AddressBook
+
 6.	Ads
+
 7.	Objective-C annotations
+
 8.	Media Capture and Playback
+
 9.	ARM support (x86 only today)
+
 10.	Compiler optimizations will not work and will likely crash clang, debug builds only
