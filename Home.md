@@ -3,10 +3,11 @@
 To use the Windows Bridge for iOS you'll need:
 
 - Windows 10
-- Visual Studio 2015 with Windows developer tools
+- Visual Studio 2015 with Windows developer tools. Visual Studio 2015 Community is available for free [here](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx). Select (at least) the following components during installation:
+    1. Programming Languages -> Visual C++
+    2. Universal Windows App Development Tools (all)
+    3. Windows 8.1 and Windows Phone 8.0/8.1 Tools (all)
 - And the SDK itself: [winobjc](https://github.com/Microsoft/WinObjC/releases/download/0.1-preview/winobjc.zip)
-
-If you don't have Visual Studio, you can download Visual Studio Community 2015 for free [here](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx).
 
 ## Build the SDK
 If you'd like to build the SDK from source, you can use the following process:
