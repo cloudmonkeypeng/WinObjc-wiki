@@ -115,6 +115,18 @@ The underlying implementations for these Objective-C projections use the Windows
 
 To see a detailed example of directly calling Windows APIs in Objective-C, take a look at [WOCCatalog](https://github.com/Microsoft/WinObjC/tree/master/samples/WOCCatalog).
 
+### Add *.cpp and use cx/Windows APIs
+If you want to call Windows APIs in *.cpp, you should set the proper pages same as *ConsumeRuntimeComponent.cpp*.
+
+Right click the *.cpp and choose Properties and set the pages:
+
+1. Item Type: C/C++ compiler
+2. Code Generation->Runtime Library: Multi-threaded Debug DLL (/MDd)
+3. Precompiled Headers-> Precompiled Header: Not Using Precompiled Headers
+4. Command Line -> Additional Options: “$(AdditionalOptions) -D_WOC_APP”
+
+Then you can use c++/cx or Windows APIs.
+
 ### Async APIs
 Asynchronous operations are supported through Objective-C via callbacks to blocks. For example, the Objective-C signature for *launchUriAsync* is:
 
